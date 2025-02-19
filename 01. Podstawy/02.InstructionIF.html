@@ -8,20 +8,44 @@
 <body>
     <script>
         /*
-            
-        
+            Operatory porównania:
+            > - większe
+            < - mniejsze
+            >= - większe bądź równe
+            <= - mniejsze bądź równe
+            == - równe
+            === - równe muszą być też typy
+            != - różne
+            !== - różne ale te same typy
         */
 
 
-        //pobierz od użytkownika liczbę 
-        // i wyświetl czy jest ona dodatnia czy ujemna
+        //pobierz od użytkownika liczbę i wyświetl czy jest ona dodatnia czy ujemna
+        function task1()
+        {
+            var numberFromUser;
 
-        var numberFromUser;
+            numberFromUser = 5;
 
-        numberFromUser = 5;
+            if (numberFromUser >= 0) 
+            {
+                document.writeln("Liczba jest dodatnia <br/>");
+            }
 
-        if (numberFromUser > 0)
-            document.writeln("Liczba jest dodatnia");
+            if (numberFromUser < 0)
+                document.writeln("Liczba jest ujemna <br/>");
+
+            if (numberFromUser >= 0) 
+                document.writeln("Liczba jest dodatnia <br/>");
+            else
+                document.writeln("Liczba jest ujemna <br/>");
+        }
+
+
+
+
+        task1();
+        //task2();
 
 
 
