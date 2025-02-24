@@ -20,7 +20,7 @@
         */
 
 
-        //pobierz od użytkownika liczbę i wyświetl czy jest ona dodatnia czy ujemna
+        //Pobierz od użytkownika liczbę i wyświetl czy jest ona dodatnia czy ujemna
         function task1()
         {
             var numberFromUser;
@@ -42,10 +42,23 @@
         }
 
 
+        ////Napisz program,
+        // który wyświetli informacje czy liczba jest parzysta czy nieparzysta.
+        function task2()
+        {
+            var numberFromUser = 89;
+
+            var rest = numberFromUser % 2;
+
+            if (rest == 0)
+                document.write("Liczba parzysta<br/>");
+            else
+                document.write("Liczba nieparzysta<br/>");
+        }
 
 
-        task1();
-        //task2();
+        //task1();
+        task2();
 
 
 
