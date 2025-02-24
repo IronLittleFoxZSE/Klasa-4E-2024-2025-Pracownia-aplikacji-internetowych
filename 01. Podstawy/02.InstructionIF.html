@@ -8,6 +8,14 @@
 <body>
     <script>
         /*
+            Zasady:
+                * DRY - don't repeat yourself
+                * KISS - keept it simple, stupid
+                * YAGNI - you aren't gonna need it
+                * SOLID
+        */
+
+        /*
             Operatory porównania:
             > - większe
             < - mniejsze
@@ -17,6 +25,17 @@
             === - równe muszą być też typy
             != - różne
             !== - różne ale te same typy
+
+            Operatory logiczne:
+            && - and
+            || - or
+            ! - not
+
+            a   b       a && b      a || b      !a
+            F   F          F           F         T
+            F   T          F           T         T
+            T   F          F           T         F
+            T   T          T           T         F
         */
 
 
@@ -56,10 +75,54 @@
                 document.write("Liczba nieparzysta<br/>");
         }
 
+        //Napisz program, który wyświetli informacje 
+        // czy liczba jest z zakresu <1 ; 10).
+        function task3()
+        {
+            var number = 78;
+
+            //wersja 1
+            if (number >= 1)
+            {
+                if (number < 10)
+                    document.write("Liczba jest z przedziału<br/>");
+                else
+                    document.write("Liczba spoza przedziału<br/>");
+            }
+            else
+                document.write("Liczba spoza przedziału<br/>");
+
+            //wersja 2
+            if (number >= 1)
+                if (number < 10)
+                    document.write("Liczba jest z przedziału<br/>");
+                else
+                    document.write("Liczba spoza przedziału<br/>");
+            else
+                document.write("Liczba spoza przedziału<br/>");
+
+            //wersja 3
+            if (number >= 1 && number < 10)
+                    document.write("Liczba jest z przedziału<br/>");
+            else
+                document.write("Liczba spoza przedziału<br/>");
+
+            //wersja 4
+            if (!(number >= 1 && number < 10))
+                document.write("Liczba spoza przedziału<br/>");
+            else
+                document.write("Liczba jest z przedziału<br/>");
+                
+            //wersja 5
+            if (number < 1 || number >= 10)
+                document.write("Liczba spoza przedziału<br/>");
+            else
+                document.write("Liczba jest z przedziału<br/>");
+        }
 
         //task1();
-        task2();
-
+        //task2();
+        task3();
 
 
     </script>
