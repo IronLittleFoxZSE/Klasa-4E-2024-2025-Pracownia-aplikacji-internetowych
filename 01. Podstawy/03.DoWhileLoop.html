@@ -43,8 +43,49 @@
             document.write("Podałeś liczbę dodatnią: " + number + "<br/>");
         }
 
-        task1();
+        //Napisz program, który wylosuje liczbę 
+        // a następnie uzytkownik będzie musiał ją zgadnąć.
+        function task2()
+        {
+            var numberFromUser;
+            const min = 1;
+            const max = 100;
+            var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            //document.writeln(randomNumber);
+            //alert(randomNumber);
 
+            /*
+            numberFromUser = parseInt(prompt("Podaj liczbę:"));
+            if (numberFromUser != randomNumber)
+            {
+                numberFromUser = parseInt(prompt("Podaj liczbę:"));
+                if (numberFromUser != randomNumber)
+                {
+                    numberFromUser = parseInt(prompt("Podaj liczbę:"));
+                    if (numberFromUser != randomNumber)
+                    {
+                        //dalej to samo
+                    }
+                }
+            }
+            */
+
+            do
+            {
+                numberFromUser = parseInt(prompt("Podaj liczbę:"));
+                if (numberFromUser < randomNumber)
+                    alert("Za mała liczba");
+                if (numberFromUser > randomNumber)
+                    alert ("Za duża liczba");
+
+            } while (numberFromUser != randomNumber);
+
+            document.writeln("Gratulacje!!!<br/>");
+
+        }
+
+        //task1();
+        task2();
 
     </script>
 </body>
