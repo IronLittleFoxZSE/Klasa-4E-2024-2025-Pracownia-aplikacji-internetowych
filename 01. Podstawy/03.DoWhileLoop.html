@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pętla Do-While</title>
+</head>
+<body>
+    <script>
+        //Napisz program, który ma pobrać od użytkownika liczbę dodatnią. 
+        //Zabezpiecz program przed pobieraniem liczb ujemnych. 
+        function task1()
+        {
+            //alert("To jest komunikat");
+            //prompt("Podaj daną");
+            var textFromUser;
+            var number;
+            /*
+            textFromUser = prompt("Podaj liczbę całkowitą dodatnią:");
+            number = parseInt(textFromUser);
+            if (number < 0)
+            {
+                textFromUser = prompt("Podaj liczbę całkowitą dodatnią:");
+                number = parseInt(textFromUser);
+                if (number < 0)
+                {
+                    textFromUser = prompt("Podaj liczbę całkowitą dodatnią:");
+                    number = parseInt(textFromUser);
+                    if (number < 0)
+                    {
+                        //znowu to samo
+                    }
+                }
+            }
+            */
+
+            do
+            {
+                textFromUser = prompt("Podaj liczbę całkowitą dodatnią:");
+                number = parseInt(textFromUser);
+            } while (number < 0);
+            
+            document.write("Podałeś liczbę dodatnią: " + number + "<br/>");
+        }
+
+        task1();
+
+
+    </script>
+</body>
+</html>
