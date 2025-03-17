@@ -81,11 +81,64 @@
             } while (numberFromUser != randomNumber);
 
             document.writeln("Gratulacje!!!<br/>");
+        }
 
+        //Napisz program wyświetlający liczby całkowite z przedziału <1,x>.
+        //Gdzie x podaje użytkownik.
+        function task3()
+        {
+            var upperRange = parseInt(prompt("Podaj górny zakres:"));
+
+            /*
+            document.write("1 <br/>");
+            if (upperRange >= 2)
+            {
+                document.write("2 <br/>");
+                if (upperRange >= 3)
+                {
+                    document.write("3 <br/>");
+                    if (upperRange >= 4)
+                    {
+                        //i tak dalej....
+                    }
+                }
+            }
+            */
+
+            /*
+            var currentNumber = 1;
+
+            document.write(currentNumber + " <br/>");
+            currentNumber++;
+            if (upperRange >= currentNumber)
+            {
+                document.write(currentNumber + " <br/>");
+                currentNumber++;
+                if (upperRange >= currentNumber)
+                {
+                    document.write(currentNumber + " <br/>");
+                    currentNumber++;
+                    if (upperRange >= currentNumber)
+                    {
+                        //i tak dalej....
+                    }
+                }
+            }
+            */
+
+            var currentNumber = 1;
+
+            do
+            {
+                document.write(currentNumber + " <br/>");
+                currentNumber++;
+            } while (upperRange >= currentNumber);
+            
         }
 
         //task1();
-        task2();
+        //task2();
+        task3();
 
     </script>
 </body>
