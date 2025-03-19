@@ -8,8 +8,6 @@
 <body>
     <script>
         /*
-            *. Napisz program, który pobierze liczbę i wyświetli jej cyfry
-            w osobnych linijkach.
 
             *. Napisz program, który policzy sumę cyfr podanej przez użytkownika liczby.
 
@@ -147,9 +145,53 @@
             
         }
 
+        //Napisz program, który pobierze liczbę i wyświetli jej cyfry
+        //w osobnych linijkach.
+        function task4()
+        {
+            var number = parseInt(prompt("Podaj liczbę"));
+
+            do
+            {
+                var digit = number % 10;
+                document.write(digit + "<br/>");
+                number = Math.floor(number / 10);
+            } while (number > 0);
+/*
+            125 % 10 => 5 
+            125 / 10 => 12
+            12  % 10 => 2
+            12  / 10 => 1
+            1   % 10 => 1
+            1   / 10 => 0
+*/
+        }
+
+        // Poproś użytkownika o podawanie liczb, aż wprowadzi zero. 
+        //Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
+        function task5()
+        {
+            var number;
+            var sum = 0;
+            var count = 0;
+
+            do
+            {
+                number = parseInt(prompt("Podaj liczbę"));
+                sum = sum + number;
+                count++;
+            } while (number != 0);
+            
+            count--;
+            document.writeln("Suma: " + sum + "<br/>");
+            document.writeln("Średnia: " + sum/count + "<br/>");
+        }
+
         //task1();
         //task2();
-        task3();
+        //task3();
+        //task4();
+        task5();
 
     </script>
 </body>
