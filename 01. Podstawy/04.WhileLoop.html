@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pętla WHILE</title>
+</head>
+<body>
+    <script>
+        //Napisz program, który policzy sumę cyfr podanej przez użytkownika liczby.
+        function task1()
+        {
+            var number = parseInt(prompt("Podaj liczbę"));
+            var sum = 0;
+            var digit;
+/*
+            if (number > 0)
+            {
+                digit = number % 10;
+                sum = sum + digit;
+                number = Math.floor(number / 10);  
+                if (number > 0)
+                {
+                    digit = number % 10;
+                    sum = sum + digit;
+                    number = Math.floor(number / 10); 
+                    if (number > 0)
+                    {
+                        //dalej to samo
+                    } 
+                }
+            }
+*/
+            while (number > 0)
+            {
+                digit = number % 10;
+                sum = sum + digit;
+                number = Math.floor(number / 10);  
+            }
+        }
+
+        task1();
+
+    </script>
+</body>
+</html>
