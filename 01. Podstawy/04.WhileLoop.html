@@ -42,8 +42,8 @@
         //Napisz program, który policzy NWD dwóch liczb.
         function task2()
         {
-            var firstNumber = parseInt(prompt("Podaj pierwszą liczbę:"));
-            var secondNumber = parseInt(prompt("Podaj drugą liczbę:"));
+            var firstNumber = Math.abs(parseInt(prompt("Podaj pierwszą liczbę:")));
+            var secondNumber = Math.abs(parseInt(prompt("Podaj drugą liczbę:")));
 
             var nwd;
             /*
@@ -52,10 +52,64 @@
             else
                 nwd = secondNumber;
             */
+
+           //Wersja 1 
             nwd = (firstNumber < secondNumber) ? firstNumber : secondNumber;
+
+            while(firstNumber % nwd != 0
+               || secondNumber % nwd != 0)
+            {
+                nwd--;
+            }
+            document.write("NWD: " + nwd + "<br/>");
+
+            //Wersja 2
+            //NWD(a, b) = a				jeśli b = 0
+	        //NWD(a, b) = NWD(b, a % b) jeśli b != 0
+
+            var a = firstNumber, b = secondNumber;
+            while(b != 0)
+            {
+                var tmp = a;
+                a = b;
+                b = tmp % b;
+            }
+            nwd = a;
+            document.write("NWD: " + nwd + "<br/>");
         }
 
-        task1();
+        //Napisz program, który wyświetli "Hello world" 
+        // tyle razy ile chce użytkownik.
+        function task3()
+        {
+            var howManyTimes = Math.abs(parseInt(prompt("Podaj liczbę:")));
+
+            /*
+            var i = 0;
+            if (i < howManyTimes)
+            {
+                document.write("Hello world <br/>");
+                i++;
+                if (i < howManyTimes)
+                {
+                    document.write("Hello world <br/>");
+                    i++;
+                    if (i < howManyTimes)
+                    {
+                        //i tak dalej
+                    }
+                }
+            }
+            */
+            var i = 0;
+            while (i < howManyTimes)
+            {
+                document.write("Hello world <br/>");
+                i++;
+            }
+        }
+
+        task3();
 
     </script>
 </body>
