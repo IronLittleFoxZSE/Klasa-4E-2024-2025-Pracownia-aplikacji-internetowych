@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchia DOM</title>
+</head>
+<body>
+    <div id="firstDiv">To jest jakiś DIV z zawartością</div>
+
+    <script>
+        document.write("Pełna ścieżka: " + window.location.href + "<br/>");
+        document.write("Protokół: " + location.protocol + "<br/>");
+
+        var firstDiv = document.getElementById("firstDiv");
+        alert(firstDiv.innerText);
+        firstDiv.innerText = "Tekst zamieniony";
+        
+    </script>
+</body>
+</html>

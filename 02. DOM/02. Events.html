@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia</title>
+    <script>
+        function changeText()
+        {
+            var firstDiv = document.getElementById("firstDiv");
+            firstDiv.innerText += " Nowy tekst";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Kliknij mnie" onclick="alert('Kliknięto mnie')"/>
+
+    <div id="firstDiv">To jest div z zawartością</div>
+    <input type="button" value="Podmień zawartość" onclick="changeText()"/>
+    
+</body>
+</html>
