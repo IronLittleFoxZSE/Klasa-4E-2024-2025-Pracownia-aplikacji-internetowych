@@ -9,17 +9,19 @@
         {
             var area = document.getElementById("areaInput").value;
             var howManyCans =  Math.ceil(area / 4);
+            document.getElementById("result").innerText = "Liczba potrzebnych puszek: " + howManyCans;
 
+            //document.getElementById("result").innerText = "Liczba potrzebnych puszek: " + Math.ceil(document.getElementById("areaInput").value / 4);
         }
     </script>
 </head>
 <body>
-    <div>Zapotrzebowanie na farbę</div>
+    <h2>Zapotrzebowanie na farbę</h2>
     <form>
         Powierzchnia malowania (m<sup>2</sup>):
-        <input type="text" id="areaInput"/>
+        <input type="number" id="areaInput" value = "5"/>
         <input type="button" value="Policz" onclick="calculate()"/>
     </form>
-    <div></div>
+    <div id="result"></div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function order()
+        {
+            var shapeNumber = document.getElementById("shapeNumber").value;
+            var orderValue = "Twoje zamówienie to cukierek ";
+            if (shapeNumber == 1)
+                orderValue = orderValue + "cytryna";
+            else if (shapeNumber == 2)
+                orderValue += "liść";
+            else if (shapeNumber == 3)
+                orderValue += "banan";
+            else
+                orderValue += "inny";
+            document.getElementById("orderResult").innerText = orderValue;
+        }
+    </script>
+</head>
+<body>
+    Numer kształtu:
+    <br/>
+    <input type="number" id="shapeNumber"/>
+    <br/>
+    skomponuj swój kolor, podaj RGB:
+    <br/>
+    R: <input type="number"/>
+    G: <input type="number"/>
+    B: <input type="number"/>
+    <br/>
+    <input type="button" value="Zamówienie" onclick="order()"/>
+    <br/>
+    <p id="orderResult">Twoje zamówienie</p>
+    <input type="button" value="Kolor"/>
+</body>
+</html>
