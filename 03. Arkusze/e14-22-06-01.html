@@ -18,23 +18,33 @@
             else
                 orderValue += "inny";
             document.getElementById("orderResult").innerText = orderValue;
+
+            var red = document.getElementById("redId").value;
+            var green = document.getElementById("greenId").value;
+            var blue = document.getElementById("blueId").value;
+
+            var colorRGB = "rgb(" + red + ", " + green + ", " + blue + ")";
+            document.getElementById("colorButton").style.backgroundColor = colorRGB;
         }
     </script>
 </head>
 <body>
     Numer kształtu:
     <br/>
-    <input type="number" id="shapeNumber"/>
+    <input type="number" id="shapeNumber" value="6"/>
     <br/>
     skomponuj swój kolor, podaj RGB:
     <br/>
-    R: <input type="number"/>
-    G: <input type="number"/>
-    B: <input type="number"/>
+    R: <input type="number" id = "redId"/>
+    G: <input type="number" id = "greenId"/>
+    B: <input type="number" id = "blueId"/>
     <br/>
     <input type="button" value="Zamówienie" onclick="order()"/>
     <br/>
     <p id="orderResult">Twoje zamówienie</p>
-    <input type="button" value="Kolor"/>
+    <input type="button" 
+           value="Kolor" 
+           id="colorButton" 
+           style="background-color: rgb(255, 70, 20);"/>
 </body>
 </html>
