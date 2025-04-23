@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function outOfStock()
+        {
+            //wersja 1
+            /*for(var i = 1; i <= 4 ; i++)
+            {
+                var cell = document.getElementById("amount" + i);
+                var amount = cell.innerText;
+                if (amount == 0)
+                    cell.style.backgroundColor = "red";
+                else if (amount >= 1 && amount <= 5)
+                    cell.style.backgroundColor = "yellow";
+                else
+                    cell.style.backgroundColor = "Honeydew";
+            }*/
+
+            //wersja 2
+            var cells = document.getElementsByName("amountV2");
+            for(var i = 0; i < cells.length ; i++)
+            {
+                var cell = cells[i];
+                var amount = cell.innerText;
+                if (amount == 0)
+                    cell.style.backgroundColor = "red";
+                else if (amount >= 1 && amount <= 5)
+                    cell.style.backgroundColor = "yellow";
+                else
+                    cell.style.backgroundColor = "Honeydew";
+            }
+        }
+
+        function update(number)
+        {
+            var newAmount = parseInt(prompt("Podaj nową ilość:"));
+
+            document.getElementById("amount" + number).innerText = newAmount;
+            outOfStock();
+        }
+
+        var idOrder = 0;
+
+    </script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Produkt</td>
+            <td>Jednostka</td>
+            <td>Dostepna ilość</td>
+            <td>Aktualizacja</td>
+            <td>Zamówienie</td>
+        </tr>
+        <tr>
+            <td>Skrętka U/UTP drut</td>
+            <td>metr</td>
+            <td id="amount1" name="amountV2">20</td>
+            <td><input type="button" value="Aktualizuj" onclick="update(1)"/></td>
+            <td><input type="button" value="Zamów>"/></td>
+        </tr>
+
+        <tr>
+            <td>Skrętka U/UTP linka</td>
+            <td>metr</td>
+            <td id="amount2" name="amountV2">2</td>
+            <td><input type="button" value="Aktualizuj" onclick="update(2)"/></td>
+            <td><input type="button" value="Zamów>"/></td>
+        </tr>
+
+        <tr>
+            <td>Wtyki 8P8C</td>
+            <td>sztuki</td>
+            <td id="amount3" name="amountV2">10</td>
+            <td><input type="button" value="Aktualizuj" onclick="update(3)"/></td>
+            <td><input type="button" value="Zamów>"/></td>
+        </tr>
+
+        <tr>
+            <td>Moduły Keystone</td>
+            <td>sztuki</td>
+            <td id="amount4" name="amountV2">0</td>
+            <td><input type="button" value="Aktualizuj" onclick="update(4)"/></td>
+            <td><input type="button" value="Zamów>"/></td>
+        </tr>
+
+    </table>
+    <script>
+        outOfStock();
+    </script>
+</body>
+</html>
